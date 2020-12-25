@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import Chart from 'chart.js';
 import isEqual from 'lodash/isEqual';
 import keyBy from 'lodash/keyBy';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const NODE_ENV = (typeof process !== 'undefined') && process.env && process.env.NODE_ENV;
 
@@ -46,8 +46,6 @@ class ChartComponent extends React.Component {
       position: 'bottom'
     },
     type: 'doughnut',
-    height: 150,
-    width: 300,
     redraw: false,
     options: {},
     datasetKeyProvider: ChartComponent.getLabelAsKey
@@ -417,4 +415,5 @@ export class Scatter extends React.Component {
 }
 
 export const defaults = Chart.defaults;
-export {Chart};
+export { Chart };
+

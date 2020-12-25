@@ -5,8 +5,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import * as React from "react";
 import * as chartjs from "chart.js";
+import * as React from "react";
 
 export type ChartDataFunction<T extends chartjs.ChartData> = (
   element: HTMLElement
@@ -20,13 +20,13 @@ export interface ChartComponentProps {
   getDatasetAtEvent?(e: any): void;
   getElementAtEvent?(e: any): void;
   getElementsAtEvent?(e: any): void;
-  height?: number;
+  height?: number | null;
   legend?: chartjs.ChartLegendOptions;
   onElementsClick?(e: any): void; // alias for getElementsAtEvent (backward compatibility)
   options?: chartjs.ChartOptions;
   plugins?: object[];
   redraw?: boolean;
-  width?: number;
+  width?: number | null;
   datasetKeyProvider?: (any: any) => any;
 }
 
